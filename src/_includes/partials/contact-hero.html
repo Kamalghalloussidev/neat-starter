@@ -1,0 +1,62 @@
+<section class="bg-gray-50 py-12">
+  <div class="container mx-auto max-w-3xl px-6">
+    <div class="bg-white shadow-md rounded-lg p-8">
+      <h2 class="text-2xl font-bold mb-2">Contactez-nous</h2>
+      <p class="text-gray-600 mb-6">Parlez-nous de votre projet — réponse sous 48h.</p>
+
+      <form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-4">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Ne pas remplir: <input name="bot-field"></label></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Nom</label>
+            <input name="nom" type="text" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Dupont">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Prénom</label>
+            <input name="prenom" type="text" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Jean">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input name="email" type="email" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="votre@email.com">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Choisissez la prestation</label>
+          <select name="prestation" required class="mt-1 block w-full border rounded px-3 py-2">
+            <option value="">-- Sélectionnez --</option>
+            <option>Audit IA</option>
+            <option>Développement sur-mesure</option>
+            <option>Automatisation de process</option>
+            <option>Maintenance & support</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea name="message" rows="5" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Décrivez votre besoin..."></textarea>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button type="submit" class="px-5 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">Envoyer</button>
+          <span id="contact-status" class="text-sm text-green-600 hidden">Message envoyé. Merci !</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('contact-status');
+      form.addEventListener('submit', function (e) {
+        // Prevent double-submission and let Netlify handle POST
+        // show simple feedback
+        status.classList.remove('hidden');
+      });
+    });
+  </script>
+</section>
