@@ -4,7 +4,7 @@ links:
     url: "/site-internet/"
     desc: landing page - site vitrine - site Ecommerce
   - title: Application mobile 
-    url: "https://www.11ty.dev/"
+    url: "/application-mobile/"
     desc: Android & IOS.
   - title: Logiciel 
     url: "https://github.com/alpinejs/alpine"
