@@ -1,14 +1,14 @@
 ---
 links:
-  - title: Netlify CMS
+  - title: Site internet 
     url: "https://www.netlifycms.org/"
-    desc: Open source content management for your Git workflow
-  - title: Eleventy
+    desc: landing page - site vitrine - site Ecommerce
+  - title: Application mobile 
     url: "https://www.11ty.dev/"
-    desc: Eleventy is a simpler static site generator.
-  - title: Alpine.js
+    desc: Android & IOS.
+  - title: Logiciel 
     url: "https://github.com/alpinejs/alpine"
-    desc: A minimal framework for composing JavaScript behavior in your markup.
-  - title: Tailwind CSS
+    desc: 100% sur mesure selon vos besoins specifique crm-erp dédié.
+  - title: IA et  automatisation
     url: "https://tailwindcss.com/"
-    desc: A utility-first CSS framework for rapidly building custom designs.
+    desc: nous intégrons l'IA pour automatiser les tâches répétitives et améliorer l'efficacité de votre entreprise.
