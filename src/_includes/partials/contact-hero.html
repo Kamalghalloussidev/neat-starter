@@ -53,9 +53,11 @@
           <h3 class="text-base font-bold uppercase text-gray-900 mb-1">Obtenez une évaluation de cas gratuite dès aujourd'hui!</h3>
           <p class="text-sm font-bold uppercase text-yellow-500 mb-4">Disponible 24 heures sur 24!</p>
 
-          <form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="flex flex-col flex-1 space-y-3">
-            <input type="hidden" name="form-name" value="contact">
-            <p class="hidden"><label>Ne pas remplir: <input name="bot-field"></label></p>
+          <form action="https://formsubmit.co/contact@pixelcraft-labs.fr" method="POST" class="flex flex-col flex-1 space-y-3">
+            <input type="hidden" name="_subject" value="Nouveau message PixelCraft">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://pixelcraft-labs.fr/contact">
+            <input type="text" name="_honey" style="display:none">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input
@@ -102,7 +104,6 @@
             <div class="flex items-center gap-4">
               <button type="submit" class="px-5 py-2 border border-gray-800 bg-white text-gray-800 text-sm hover:bg-gray-100 transition-colors">Soumettre</button>
               <a href="/" class="px-5 py-2 border border-gray-800 bg-white text-gray-800 text-sm hover:bg-gray-100 transition-colors">← Retour à l'accueil</a>
-              <span id="contact-status" class="text-sm text-green-600 hidden">Message envoyé. Merci !</span>
             </div>
           </form>
         </div>
@@ -130,5 +131,4 @@
     </div>
   </div>
 
-  <script src="/static/js/contact.js" defer></script>
 </section>
