@@ -16,9 +16,11 @@
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen bg-gray-100">
 
-    {{ content | safe }}
+    <main class="flex-1">
+      {{ content | safe }}
+    </main>
 
     {% include "./partials/footer.html" %}
 
