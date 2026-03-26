@@ -1,0 +1,23 @@
+Options -Indexes
+
+# Encodage UTF-8
+AddDefaultCharset UTF-8
+
+# Activer le moteur de réécriture
+RewriteEngine On
+
+# Forcer HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Servir les fichiers existants directement
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# URLs propres : /contact → /contact/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /$1/index.html [L]
+
+# Page 404 personnalisée (optionnel)
+ErrorDocument 404 /404/index.html

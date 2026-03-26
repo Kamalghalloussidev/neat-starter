@@ -32,6 +32,9 @@ module.exports = function (eleventyConfig) {
       "./static/css/prism-tomorrow.css",
   });
 
+  // Copy .htaccess for Apache (LWS hosting)
+  eleventyConfig.addPassthroughCopy("./src/.htaccess");
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
