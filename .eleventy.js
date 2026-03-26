@@ -35,6 +35,9 @@ module.exports = function (eleventyConfig) {
   // Copy .htaccess for Apache (LWS hosting)
   eleventyConfig.addPassthroughCopy("./src/.htaccess");
 
+  // Copy JS files to /_site
+  eleventyConfig.addPassthroughCopy("./src/static/js");
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
