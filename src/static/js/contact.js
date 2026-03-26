@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
       message:   form.message.value,
     };
 
+    console.log('[Contact] Envoi du payload :', payload);
+
     try {
       const res = await fetch('https://formsubmit.co/ajax/contact@pixelcraft-labs.fr', {
         method: 'POST',
@@ -50,16 +52,29 @@ document.addEventListener('DOMContentLoaded', function () {
         body: JSON.stringify(payload),
       });
 
-      const data = await res.json().catch(() => ({}));
+      console.log('[Contact] Statut HTTP :', res.status, res.statusText);
+
+      const rawText = await res.text();
+      console.log('[Contact] Réponse brute :', rawText);
+
+      let data = {};
+      try { data = JSON.parse(rawText); } catch (parseErr) {
+        console.warn('[Contact] Impossible de parser la réponse JSON :', parseErr.message);
+      }
+
+      console.log('[Contact] Réponse parsée :', data);
 
       if (res.ok && data.success === 'true') {
+        console.log('[Contact] ✅ Envoi réussi');
         showSuccess();
         form.reset();
       } else {
-        showError('Le message n\'a pas pu être envoyé. Veuillez réessayer.');
+        console.error('[Contact] ❌ Échec —', 'HTTP', res.status, '| data.success =', data.success, '| message =', data.message || '(aucun)');
+        showError('Le message n\'a pas pu être envoyé (code ' + res.status + '). Veuillez réessayer.');
       }
     } catch (err) {
-      showError('Erreur réseau. Vérifiez votre connexion et réessayez.');
+      console.error('[Contact] ❌ Erreur réseau :', err.name, err.message);
+      showError('Erreur réseau (' + err.message + '). Vérifiez votre connexion et réessayez.');
     } finally {
       setLoading(false);
     }
