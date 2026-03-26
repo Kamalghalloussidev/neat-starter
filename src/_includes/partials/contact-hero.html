@@ -1,51 +1,98 @@
-<section class="bg-gray-50 py-12">
-  <div class="container mx-auto max-w-3xl px-6">
-    <div class="bg-white shadow-md rounded-lg p-8">
-      <h2 class="text-2xl font-bold mb-2">Contactez-nous</h2>
-      <p class="text-gray-600 mb-6">Parlez-nous de votre projet — réponse sous 24h.</p>
+<section class="bg-gray-50 py-8">
+  <div class="container mx-auto px-6 w-full">
+    <div class="max-w-7xl mx-auto w-full">
 
-      <form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-4">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden"><label>Ne pas remplir: <input name="bot-field"></label></p>
+      <!-- Section title -->
+      <h2 class="text-2xl font-bold uppercase text-center mb-6">Contactons-nous</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Top info blocks -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="flex items-start gap-3 bg-white/50 rounded-lg p-4">
+          <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11a3 3 0 100-6 3 3 0 000 6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s8-5.5 8-11a8 8 0 10-16 0c0 5.5 8 11 8 11z"/></svg>
           <div>
-            <label class="block text-sm font-medium text-gray-700"></label>
-            <input name="nom" type="text" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Dupont">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700"></label>
-            <input name="prenom" type="text" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Jean">
+            <h4 class="text-xs uppercase text-gray-600 font-semibold">Adresse</h4>
+            <p class="text-sm text-gray-700 mt-1">SoHo, 94 Broadway St, New York, NY 10001</p>
           </div>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700"></label>
-          <input name="email" type="email" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="votre@email.com">
+        <div class="flex items-start gap-3 bg-white/50 rounded-lg p-4">
+          <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3.5A1.5 1.5 0 013.5 2h1A1.5 1.5 0 016 3.5V5a1 1 0 01-1 1H4a1 1 0 00-1 1v1a11 11 0 0011 11h1a1 1 0 001-1v-1a1 1 0 011-1h1.5A1.5 1.5 0 0122 16.5V15"></path></svg>
+          <div>
+            <h4 class="text-xs uppercase text-gray-600 font-semibold">Téléphone</h4>
+            <p class="text-sm text-gray-700 mt-1">+1 234-9876-5400<br>+1 888-0123-4567 (sans frais)</p>
+          </div>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700"></label>
-          <select name="prestation" required class="mt-1 block w-full border rounded px-3 py-2">
-            <option value="">-- Sélectionnez --</option>
-            <option>Site internet</option>
-            <option>Application mobile</option>
-            <option>Logiciel</option>
-            <option>IA & automatisation</option>
-          </select>
+        <div class="flex items-start gap-3 bg-white/50 rounded-lg p-4">
+          <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9V3h12v6"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 18h12v-6H6v6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 14v2h12v-2"/></svg>
+          <div>
+            <h4 class="text-xs uppercase text-gray-600 font-semibold">Fax</h4>
+            <p class="text-sm text-gray-700 mt-1">+1 234-567-8900</p>
+          </div>
         </div>
 
-        <div>
-          <label class="block text-sm font-medium text-gray-700"></label>
-          <textarea name="message" rows="5" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Décrivez votre besoin..."></textarea>
+        <div class="flex items-start gap-4 bg-white/50 rounded-lg p-6">
+          <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8"/></svg>
+          <div>
+            <h4 class="text-xs uppercase text-gray-600 font-semibold">Email</h4>
+            <p class="text-sm text-gray-700 mt-1">bonjour@theme.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom two-column section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+        <!-- Left: Form -->
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="text-lg font-bold uppercase text-gray-800">Obtenez une évaluation de cas gratuite dès aujourd'hui!</h3>
+          <p class="mt-1 uppercase text-sm text-gray-600">Disponible 24 heures sur 24!</p>
+
+          <form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="mt-4 space-y-3">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden"><label>Ne pas remplir: <input name="bot-field"></label></p>
+
+            <div>
+              <label class="sr-only">Nom</label>
+              <input name="nom" type="text" required placeholder="Nom" class="w-full bg-gray-100 rounded-md p-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+            </div>
+
+            <div>
+              <label class="sr-only">Email</label>
+              <input name="email" type="email" required placeholder="Email" class="w-full bg-gray-100 rounded-md p-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+            </div>
+
+            <div>
+              <label class="sr-only">Message</label>
+              <textarea name="message" rows="4" required placeholder="Votre message" class="w-full bg-gray-100 rounded-md p-2 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200"></textarea>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">Soumettre</button>
+              <button type="reset" class="px-4 py-2 border border-gray-200 rounded-md text-gray-700 bg-white">Annuler</button>
+              <span id="contact-status" class="text-sm text-green-600 hidden">Message envoyé. Merci !</span>
+            </div>
+          </form>
         </div>
 
-        <div class="flex items-center gap-4">
-          <button type="submit" class="px-5 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">Envoyer</button>
-          <a href="/" class="inline-block px-4 py-2 border border-gray-200 rounded text-gray-700 bg-white hover:bg-gray-100">Retour vers l'accueil</a>
-          <span id="contact-status" class="text-sm text-green-600 hidden">Message envoyé. Merci !</span>
+        <!-- Right: Info + Map -->
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col">
+          <h3 class="text-lg font-bold uppercase text-gray-800">Nous sommes ici</h3>
+          <p class="mt-1 text-sm text-gray-700">Lun-Ven 8h30–17h<br>Les téléphones sont ouverts 24h/24 et 7j/7</p>
+
+          <div class="mt-4 rounded overflow-hidden border border-gray-100 flex-1">
+            <iframe
+              title="map"
+              width="100%"
+              height="180"
+              style="border:0; display:block;"
+              src="https://maps.google.com/maps?q=New%20York&t=&z=10&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 
