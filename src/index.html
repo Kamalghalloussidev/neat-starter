@@ -2,7 +2,33 @@
 layout: default
 title: Pixel Crafter
 path: home
+description: "Kamal Ghalloussi, freelance développeur web et mobile depuis 2018. Création de sites internet sur mesure, applications mobiles Android & iOS, logiciels CRM/ERP et solutions IA & automatisation."
+keywords: "développeur freelance, développeur web, développeur mobile, création site internet, application mobile, logiciel sur mesure, intelligence artificielle, automatisation, freelance France"
 ---
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kamal Ghalloussi",
+  "jobTitle": "Développeur Freelance",
+  "description": "Freelance développeur web et mobile depuis 2018, spécialisé en création de sites internet, applications mobiles, logiciels sur mesure, IA et automatisation.",
+  "url": "https://pixelcraft.dev/",
+  "sameAs": ["https://wa.me/33650427837"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations PixelCraft",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de site internet sur mesure", "url": "https://pixelcraft.dev/site-internet/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Développement d'application mobile Android & iOS", "url": "https://pixelcraft.dev/application-mobile/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Développement de logiciel sur mesure", "url": "https://pixelcraft.dev/logiciel/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intelligence artificielle et automatisation", "url": "https://pixelcraft.dev/ia-automatisation/" } }
+    ]
+  }
+}
+</script>
+{% endblock %}
 
 <div class="flex-1 container mx-auto flex flex-col justify-center items-center">
   <h1>
@@ -13,7 +39,7 @@ path: home
   </h1>
 
   <p>  
-    freelance depuis 2018, spécialisé dans le développement web et mobile
+    Freelance depuis 2018, spécialisé dans le développement web et mobile
      </p>
 
   {% include "./_includes/partials/content.html" %}

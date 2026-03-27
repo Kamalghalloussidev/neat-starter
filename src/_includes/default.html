@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
+
+    <!-- Title -->
+    <title>{% if path == "home" %}PixelCraft — Freelance Développeur Web & Mobile{% else %}{{title}} | PixelCraft{% endif %}</title>
+
+    <!-- Description & Keywords -->
+    <meta name="description" content="{% if description %}{{description}}{% else %}{{settings.description}}{% endif %}"/>
+    <meta name="keywords" content="{% if keywords %}{{keywords}}{% else %}{{settings.keywords}}{% endif %}"/>
+    <meta name="author" content="{{settings.author}}"/>
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{settings.siteUrl}}{{page.url}}"/>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="PixelCraft"/>
+    <meta property="og:title" content="{% if path == 'home' %}PixelCraft — Freelance Développeur Web & Mobile{% else %}{{title}} | PixelCraft{% endif %}"/>
+    <meta property="og:description" content="{% if description %}{{description}}{% else %}{{settings.description}}{% endif %}"/>
+    <meta property="og:url" content="{{settings.siteUrl}}{{page.url}}"/>
+    <meta property="og:image" content="{% if ogImage %}{{settings.siteUrl}}{{ogImage}}{% else %}{{settings.siteUrl}}/static/img/og-image.png{% endif %}"/>
+    <meta property="og:locale" content="fr_FR"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{% if path == 'home' %}PixelCraft — Freelance Développeur Web & Mobile{% else %}{{title}} | PixelCraft{% endif %}"/>
+    <meta name="twitter:description" content="{% if description %}{{description}}{% else %}{{settings.description}}{% endif %}"/>
+    <meta name="twitter:image" content="{% if ogImage %}{{settings.siteUrl}}{{ogImage}}{% else %}{{settings.siteUrl}}/static/img/og-image.png{% endif %}"/>
+
+    <!-- JSON-LD : WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PixelCraft",
+      "url": "{{settings.siteUrl}}"
+    }
+    </script>
+
     {% block head %}{% endblock %}
+
     <link rel="icon" type="image/png" href="/static/img/FAVICON.png">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
